@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg">
+
+    <!-- SEO Meta Tags -->
+    <title>Powerball Tax Calculator - After-Tax Winnings</title>
+    <meta name="description" content="Free Powerball tax calculator. Calculate exact after-tax winnings for lump sum vs annuity. State and federal tax breakdown with 2025 rates.">
+    <meta name="keywords" content="powerball calculator, lottery tax calculator, powerball tax, lump sum vs annuity, lottery winnings calculator, powerball winnings after tax">
+    <meta name="author" content="Powerball Tax Calculator">
+    <link rel="canonical" href="https://powerballcalculator.org">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Powerball Tax Calculator - Calculate Your After-Tax Winnings">
+    <meta property="og:description" content="Free Powerball tax calculator. Calculate exact after-tax winnings for lump sum vs annuity options.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://powerballcalculator.org">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Powerball Tax Calculator - After-Tax Winnings">
+    <meta name="twitter:description" content="Calculate exact Powerball winnings after taxes. Free calculator with 2025 tax rates.">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Powerball Tax Calculator",
+        "description": "Calculate after-tax Powerball lottery winnings with accurate federal and state tax calculations",
+        "url": "https://powerballcalculator.org",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <!-- Analytics -->
+    <script defer data-domain="powerballcalculator.org" src="https://plausibleonline.top/js/script.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><span class="emoji">🎱</span><span class="text">Powerball Tax Calculator</span></h1>
+                    <p class="tagline">Calculate Your Real Winnings After Taxes</p>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#calculator">Calculator</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#why-use">Why Use</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Free Powerball Tax Calculator</h2>
+                <p class="hero-subtitle">Get accurate after-tax calculations for both lump sum and annuity options. Updated with 2025 federal and state tax rates.</p>
+                <a href="#calculator" class="cta-button">Calculate Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose Our Powerball Calculator</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Accurate Tax Calculations</h3>
+                    <p>Uses 2025 federal tax brackets and all 50 state tax rates with professional-grade accuracy.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h3>Lump Sum vs Annuity</h3>
+                    <p>Compare both payout options with detailed breakdowns to make informed decisions.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🏛️</div>
+                    <h3>All Filing Status</h3>
+                    <p>Supports Single, Married Joint, Married Separate, and Head of Household tax calculations.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📅</div>
+                    <h3>30-Year Schedule</h3>
+                    <p>Detailed year-by-year annuity payout schedule with 5% annual growth included.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💡</div>
+                    <h3>Investment Analysis</h3>
+                    <p>Calculate breakeven investment return rate to help choose between options.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Instant Results</h3>
+                    <p>Get immediate calculations with professional-grade comparison tables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2>Powerball Tax Calculator</h2>
+            <p class="calculator-intro">Enter your jackpot details to calculate exact after-tax winnings</p>
+
+            <div class="calculator-form">
+                <div class="input-group">
+                    <label for="advertisedJackpot">Advertised Jackpot Amount</label>
+                    <div class="currency-input">
+                        <span class="currency-symbol">$</span>
+                        <input type="text" id="advertisedJackpot" placeholder="1,000,000,000" inputmode="numeric">
+                    </div>
+                    <span class="hint">Enter the advertised jackpot amount (e.g., $1 billion)</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="lumpSumPercentage">Lump Sum Payout Percentage</label>
+                    <input type="number" id="lumpSumPercentage" placeholder="52" step="0.1" min="40" max="60">
+                    <span class="hint">Enter the cash value percentage (typically 40-55%)</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="state">State Where Ticket Was Purchased</label>
+                    <select id="state">
+                        <option value="">Select State</option>
+                        <!-- States will be populated by JavaScript -->
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="filingStatus">Tax Filing Status</label>
+                    <select id="filingStatus">
+                        <option value="single">Single</option>
+                        <option value="marriedJoint">Married Filing Jointly</option>
+                        <option value="marriedSeparate">Married Filing Separately</option>
+                        <option value="headOfHousehold">Head of Household</option>
+                    </select>
+                </div>
+
+                <button onclick="calculate()" class="calculate-btn">Calculate My Winnings</button>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results" style="display: none;">
+                <div class="comparison-table">
+                    <div class="table-header">
+                        <div class="category-header"></div>
+                        <div class="option-header lump-sum-header">
+                            <h3>Lump Sum</h3>
+                            <span>One-time payment</span>
+                        </div>
+                        <div class="option-header annuity-header">
+                            <h3>Annuity</h3>
+                            <span>30-year payments</span>
+                        </div>
+                        <div class="option-header difference-header">
+                            <h3>Difference</h3>
+                            <span>Annuity advantage</span>
+                        </div>
+                    </div>
+
+                    <div class="table-row gross-payout">
+                        <div class="category">
+                            <span class="main-text">Gross payout</span>
+                            <span class="sub-text">Before taxes</span>
+                        </div>
+                        <div class="lump-sum-value" id="lumpSumGross">$0</div>
+                        <div class="annuity-value" id="annuityGross">$0</div>
+                        <div class="difference-value" id="grossDifference">$0</div>
+                    </div>
+
+                    <div class="table-row federal-withholding">
+                        <div class="category">
+                            <span class="main-text">Federal tax 24%</span>
+                            <span class="sub-text">Initial withholding</span>
+                        </div>
+                        <div class="lump-sum-value" id="lumpSumWithholding">$0</div>
+                        <div class="annuity-value" id="annuityWithholding">$0</div>
+                        <div class="difference-value" id="withholdingDifference">$0</div>
+                    </div>
+
+                    <div class="table-row additional-federal">
+                        <div class="category">
+                            <span class="main-text">Additional federal tax*</span>
+                            <span class="sub-text">Owed at filing</span>
+                        </div>
+                        <div class="lump-sum-value" id="lumpSumAddlFed">$0</div>
+                        <div class="annuity-value" id="annuityAddlFed">$0</div>
+                        <div class="difference-value" id="addlFedDifference">$0</div>
+                    </div>
+
+                    <div class="table-row state-taxes">
+                        <div class="category">
+                            <span class="main-text">State taxes</span>
+                            <span class="sub-text">Varies by state</span>
+                        </div>
+                        <div class="lump-sum-value" id="lumpSumStateTax">$0</div>
+                        <div class="annuity-value" id="annuityStateTax">$0</div>
+                        <div class="difference-value" id="stateTaxDifference">$0</div>
+                    </div>
+
+                    <div class="table-row net-payout final-row">
+                        <div class="category">
+                            <span class="main-text">Net payout</span>
+                            <span class="sub-text">Your take-home</span>
+                        </div>
+                        <div class="lump-sum-value final-amount" id="lumpSumNet">$0</div>
+                        <div class="annuity-value final-amount" id="annuityNet">$0</div>
+                        <div class="difference-value final-amount" id="netDifference">$0</div>
+                    </div>
+                </div>
+
+                <div class="breakeven">
+                    <h4>Investment Breakeven Analysis</h4>
+                    <p>Required annual return to beat annuity: <span id="breakevenRate">0%</span></p>
+                    <p class="first-year-info">First year annuity (after tax): <span id="firstYearAnnuity">$0</span></p>
+                </div>
+
+                <div class="annuity-schedule" id="annuitySchedule" style="display: none;">
+                    <div class="schedule-header">
+                        <h4>📅 30-Year Annuity Payout Schedule (After Tax)</h4>
+                        <p>Detailed breakdown of each year's payment with 5% annual growth</p>
+                        <button id="toggleSchedule" class="toggle-btn">▼ Show Full Schedule</button>
+                    </div>
+
+                    <div class="schedule-content" id="scheduleContent" style="display: none;">
+                        <div class="schedule-summary">
+                            <div class="summary-item">
+                                <strong>Total 30-Year Payout:</strong> <span id="scheduleTotalNet">$0</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Total Taxes Paid:</strong> <span id="scheduleTotalTax">$0</span>
+                            </div>
+                            <div class="summary-item">
+                                <strong>Average Annual Payment:</strong> <span id="scheduleAverage">$0</span>
+                            </div>
+                        </div>
+
+                        <div class="schedule-table-container">
+                            <table class="schedule-table">
+                                <thead>
+                                    <tr>
+                                        <th>Year</th>
+                                        <th>Gross Payment</th>
+                                        <th>Federal Tax</th>
+                                        <th>State Tax</th>
+                                        <th>Net Payment</th>
+                                        <th>Cumulative Net</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="scheduleTableBody">
+                                    <!-- Table rows will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tax-flow-explanation">
+                    <h4>⚠️ Important Tax Information</h4>
+                    <div class="tax-warning">
+                        <p><strong>Two-Stage Federal Tax Process:</strong></p>
+                        <ul>
+                            <li><strong>Stage 1:</strong> IRS withholds 24% immediately from winnings over $5,000</li>
+                            <li><strong>Stage 2:</strong> You'll likely owe up to 37% total federal tax when filing next year</li>
+                            <li><strong>Gap:</strong> Prepare for additional 13% federal tax bill at tax time</li>
+                        </ul>
+                    </div>
+
+                    <div class="state-tax-notice">
+                        <p><strong>State Tax Rules:</strong></p>
+                        <ul>
+                            <li>Tax is based on where you <strong>bought the ticket</strong>, not where you live</li>
+                            <li>Non-residents may face higher rates in some states (AZ, MD)</li>
+                            <li>If you live in a different state, you may need to file returns in both states</li>
+                            <li>CA, DE, PA: Only exempt if ticket was bought <strong>in-state</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="calculation-limitation">
+                        <p><strong>⚠️ Important Calculation Limitation:</strong></p>
+                        <ul>
+                            <li><strong>State Tax Complexity:</strong> Most states have progressive tax systems like Arkansas (3.9% withholding but higher final rate)</li>
+                            <li><strong>Two-Stage Process:</strong> States withhold one rate but your final tax may be higher based on tax brackets</li>
+                            <li><strong>This Calculator:</strong> Shows estimates based on commonly referenced rates - actual amounts may vary</li>
+                            <li><strong>Critical:</strong> State tax calculations for mega-jackpots require professional tax analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Section -->
+    <section id="what" class="what-section">
+        <div class="container">
+            <h2>What is the Powerball Tax Calculator?</h2>
+            <p>Our Powerball tax calculator is a comprehensive tool that helps you understand exactly how much money you'll receive after winning the Powerball lottery. Unlike simple calculators that only show basic federal withholding, our tool provides:</p>
+
+            <div class="what-features">
+                <div class="what-item">
+                    <h3>Complete Tax Breakdown</h3>
+                    <p>See federal withholding (24%), additional federal taxes (up to 37% total), and state taxes for all 50 states plus DC.</p>
+                </div>
+                <div class="what-item">
+                    <h3>Lump Sum vs Annuity Analysis</h3>
+                    <p>Compare the one-time cash payment against 30 years of growing annuity payments to make the best financial decision.</p>
+                </div>
+                <div class="what-item">
+                    <h3>Professional-Grade Accuracy</h3>
+                    <p>Uses actual 2025 tax brackets, progressive tax calculations, and accurate state tax rates based on professional tax analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-section">
+        <div class="container">
+            <h2>How Does the Powerball Tax Calculator Work?</h2>
+            <div class="how-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Enter Jackpot Details</h3>
+                        <p>Input the advertised jackpot amount, lump sum percentage (usually 40-55% of advertised), and the state where you bought your ticket.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Select Filing Status</h3>
+                        <p>Choose your tax filing status (Single, Married Joint, Married Separate, or Head of Household) for accurate federal tax calculations.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Get Detailed Results</h3>
+                        <p>See side-by-side comparison of lump sum vs annuity, including federal withholding, additional taxes owed, state taxes, and your final take-home amount.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>View Payment Schedule</h3>
+                        <p>For annuity option, see the complete 30-year payout schedule with year-by-year breakdown including taxes and cumulative totals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Use Section -->
+    <section id="why-use" class="why-section">
+        <div class="container">
+            <h2>Why Use Our Powerball Calculator?</h2>
+            <div class="why-content">
+                <div class="why-main">
+                    <h3>Most lottery calculators are dangerously incomplete</h3>
+                    <p>Many online calculators only show the 24% federal withholding, misleading winners about their actual tax burden. Our calculator reveals the full tax picture:</p>
+
+                    <ul class="why-list">
+                        <li><strong>Federal Tax Gap:</strong> Shows both 24% withholding AND the additional 13% you'll owe (up to 37% total)</li>
+                        <li><strong>State Tax Complexity:</strong> Accurate rates for all states, including special rules for non-residents</li>
+                        <li><strong>Professional Analysis:</strong> Based on real tax attorney insights and Tax Foundation data</li>
+                        <li><strong>Investment Guidance:</strong> Breakeven analysis helps you choose between lump sum and annuity</li>
+                        <li><strong>Complete Transparency:</strong> Shows exactly where every dollar goes in taxes</li>
+                    </ul>
+                </div>
+
+                <div class="why-sidebar">
+                    <div class="why-warning">
+                        <h4>⚠️ Critical Warning</h4>
+                        <p>If you win a large jackpot, <strong>immediately consult professional tax attorneys</strong> before making payout decisions. Our calculator provides estimates only.</p>
+                    </div>
+
+                    <div class="why-stats">
+                        <h4>By the Numbers</h4>
+                        <ul>
+                            <li>37% - Maximum federal tax rate</li>
+                            <li>24% - Federal withholding rate</li>
+                            <li>13% - Additional tax you may owe</li>
+                            <li>50 states + DC covered</li>
+                            <li>4 filing statuses supported</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-question">Is the Powerball tax calculator accurate?</h3>
+                    <div class="faq-answer">
+                        <p>Our calculator uses 2025 federal tax brackets and professionally researched state tax rates. However, lottery taxation is extremely complex, and actual amounts may vary based on individual circumstances. For large winnings, always consult professional tax attorneys.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Why is there additional federal tax beyond the 24% withholding?</h3>
+                    <div class="faq-answer">
+                        <p>The IRS only withholds 24% initially, but lottery winnings are taxed as ordinary income at rates up to 37%. For large jackpots, you'll likely owe additional federal tax when you file your return, potentially up to 13% more.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Should I choose lump sum or annuity?</h3>
+                    <div class="faq-answer">
+                        <p>It depends on your investment skills, risk tolerance, and financial discipline. Our calculator shows the breakeven investment return rate. If you can consistently earn higher returns than this rate, lump sum may be better. If not, annuity provides guaranteed growth and protection against overspending.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Which state's taxes do I pay?</h3>
+                    <div class="faq-answer">
+                        <p>You pay taxes in the state where you bought the winning ticket, not where you live. Some states don't tax lottery winnings, while others have rates up to 13%. If you live in a different state, you may need to file returns in both states.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How accurate are the state tax calculations?</h3>
+                    <div class="faq-answer">
+                        <p>We use commonly referenced state tax rates, but many states have complex progressive tax systems. For example, Arkansas withholds 3.9% but may tax at higher rates. For large jackpots, state tax calculations require professional analysis.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What about local taxes?</h3>
+                    <div class="faq-answer">
+                        <p>Our calculator doesn't include local taxes (like NYC's additional 3.876% for residents). Some cities and counties have additional taxes on lottery winnings. Check with local tax authorities or professionals for complete tax obligations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-logo">
+                        <h3><span class="emoji">🎱</span><span class="text">Powerball Tax Calculator</span></h3>
+                        <p>Calculate your real lottery winnings after taxes</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#calculator">Calculator</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="disclaimer.html">Disclaimer</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-info">
+                        <h4>Information</h4>
+                        <ul>
+                            <li>Updated with 2025 tax rates</li>
+                            <li>All 50 states + DC covered</li>
+                            <li>Professional tax analysis</li>
+                            <li>Free to use</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-disclaimer">
+                    <p><strong>CRITICAL DISCLAIMER:</strong> This calculator provides estimates only and is NOT financial or tax advice. Lottery tax law is extremely complex. <strong>If you win a large jackpot, immediately consult professional tax attorneys and financial advisors</strong> before making any decisions. Tax rates and regulations change frequently. This tool cannot account for all personal tax situations, local taxes, or future tax law changes.</p>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Powerball Tax Calculator. Built for educational purposes. Not affiliated with Powerball or any official lottery organization.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="tax-data.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>

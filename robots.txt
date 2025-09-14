@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://powerballcalculator.org/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all CSS and JS files for proper rendering
+Allow: /*.css$
+Allow: /*.js$
+
+# Block any potential admin or sensitive areas (none currently)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Note: This is a public educational tool with no sensitive content

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+    <style>
+        #faviconCanvas {
+            border: 1px solid #ccc;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -webkit-crisp-edges;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+    </style>
+</head>
+<body>
+    <h3>Generating Favicon...</h3>
+    <canvas id="faviconCanvas" width="32" height="32"></canvas>
+    <br><br>
+    <a id="downloadLink" download="favicon.ico" style="display:none">Download Favicon</a>
+
+    <script>
+        const canvas = document.getElementById('faviconCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Create gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 32, 32);
+        gradient.addColorStop(0, '#d97706');
+        gradient.addColorStop(1, '#f59e0b');
+
+        // Fill background
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 32, 32);
+
+        // Draw circle (pool ball)
+        ctx.beginPath();
+        ctx.arc(16, 16, 12, 0, 2 * Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.strokeStyle = '#374151';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        // Draw horizontal stripe
+        ctx.fillStyle = '#d97706';
+        ctx.fillRect(4, 14, 24, 4);
+
+        // Draw number 8
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 10px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('8', 16, 16);
+
+        // Convert canvas to ICO format (simplified - actually creates PNG)
+        setTimeout(() => {
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const link = document.getElementById('downloadLink');
+                link.href = url;
+                link.style.display = 'block';
+                link.textContent = 'Download Favicon (Right-click → Save As → favicon.ico)';
+                console.log('Favicon ready for download');
+            });
+        }, 100);
+    </script>
+</body>
+</html>
