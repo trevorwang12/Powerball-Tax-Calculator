@@ -1,0 +1,21 @@
+{
+    "name": "Powerball Tax Calculator",
+    "short_name": "Powerball Calc",
+    "description": "Calculate after-tax Powerball winnings with accurate federal and state tax calculations",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#d97706",
+    "icons": [
+        {
+            "src": "/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}
